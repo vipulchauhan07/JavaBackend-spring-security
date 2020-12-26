@@ -28,7 +28,9 @@ public class FooBarConfig extends WebSecurityConfigurerAdapter {
     // Authorization purpose
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http.httpBasic()
+                .and()
+                .authorizeRequests()
                 .antMatchers("/admin/**").hasRole("admin_role")
                 .antMatchers("/student/**").hasAnyRole("student_role", "admin_role")
                 .antMatchers("/**").permitAll()
