@@ -6,14 +6,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FooBarController {
 
-    @GetMapping("/foo")
-    public String foo() {
-        return "Hello Foo!";
+    @GetMapping("/")
+    public String hello() {
+        return "Hello World!";
     }
 
-    @GetMapping("/bar")
-    public String bar() {
-        return "Hello Bar!";
+    @GetMapping("/student")
+    public String getStudent() {
+        return "Hello student!";
     }
 
+    @GetMapping("/admin")
+    public String getAdmin() {
+        return "Hello admin!";
+    }
+
+    @GetMapping("/visitor")
+    public String getVisitor() {
+        return "Hello Visitor!";
+    }
+
+    // how to create apis and their name for ease of authentication and authorization
+    // /book -get method
+    // /book -post method
+    // /book/{id} - getting one book
 }
