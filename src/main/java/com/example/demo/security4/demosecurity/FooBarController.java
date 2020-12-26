@@ -26,8 +26,4 @@ public class FooBarController {
         return "Hello Visitor!";
     }
 
-    // how to create apis and their name for ease of authentication and authorization
-    // /book -get method
-    // /book -post method
-    // /book/{id} - getting one book
 }
